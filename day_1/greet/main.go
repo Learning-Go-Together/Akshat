@@ -1,7 +1,7 @@
-package greet
+package main
 
 import "fmt"
 
-func Hbd() {
+func main() {
 	fmt.Println("Happy Birthday")
 }

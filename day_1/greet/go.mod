@@ -1,3 +1,3 @@
-module LEARNINGGO/greet
+module greet
 
 go 1.24.0
