@@ -4,6 +4,7 @@ import "fmt"
 
 func main() {
 	fmt.Println(naked_return())
+	fmt.Println(explicit_return())
 
 }
 
@@ -12,3 +13,9 @@ func naked_return() (s string) {
 	s = "ask"
 	return
 }
+
+//this is explicit return
+func explicit_return() (s string) {
+	return "explicit"
+}
+
