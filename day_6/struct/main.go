@@ -22,6 +22,9 @@ func main() {
 	demo()
 	demo2()
 	demo3()
+	// alto.demo4()
+	demo4(alto)
+	alto.demo5()
 }
 
 type car struct {
@@ -105,4 +108,51 @@ func demo3() {
 
 	fmt.Println(demoStruct)
 
+}
+
+//passing struct as arguments
+func demo4(ca car) {
+	fmt.Println(ca.brand, ca.model, ca.regNo)
+}
+
+//struct methods
+func (c car) demo5() {
+	fmt.Println("Struct methods called")
+}
+
+//structs fields are stored in same manner as
+/*	struct stores all the field in contigous manner so there order matters as it divides
+	the memory according to the largest datatype
+
+
+	type stats struct {
+		Reach    uint16  <- 2 bytes
+		NumPosts uint8 	 <- 1 bytes
+		NumLikes uint8	 <- 1 bytes
+	}
+
+	memory :
+	   2	  2
+	[  2  ][ 1 ,1 ]
+
+
+	type stats struct {
+		NumPosts uint8 	 <- 1 bytes
+		Reach    uint16  <- 2 bytes
+		NumLikes uint8	 <- 1 bytes
+	}
+
+	memory:
+		2		2		2
+	[	1	][	2	][	1	]
+*/
+
+//empty struct
+
+func demoEmptyStruct() {
+
+	//anonymous empty struct
+	// emptyStruct := struct{}{}
+	//empty struct declaration
+	type emptyStruct struct{}
 }
