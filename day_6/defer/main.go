@@ -7,6 +7,8 @@ func main() {
 }
 
 //defer is a keyword that called just before the termination of any function
+
+//if there are multiple defer statements then they are executed in reverse order
 func demo(a int) int {
 	defer fmt.Println("Defer executed")
 	if a == 3 {
